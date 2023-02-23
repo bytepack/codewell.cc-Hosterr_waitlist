@@ -51,6 +51,13 @@
 
 html {
     font-size: 62.5%;
+        /* to prevent scroll-x after .page translateX - also did this on body selector */
+    overflow-x: hidden;
+}
+
+/* to prevent scroll on mobile menu */
+.prevent-scroll{
+	overflow: hidden;
 }
 
 body {
@@ -58,10 +65,12 @@ body {
     font-size: 1.6rem;
     color: var(--text-color);
     background-color: var(--bg-color);
+    /* to prevent scroll-x after .page translateX - also did this on html selector */
+    overflow-x: hidden;
 }
 
 /* Prevent CSS transitions on page load with JS */
-.preload-transitions * {
+.prevent-preload-transitions * {
 	transition: none !important;
 }
 
