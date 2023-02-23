@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="img/favicon.png" rel="icon">
+    <title>Hosterr</title>
+</head>
+<body>
+    <div class="mobile-menu">
+
+        <div class="mobile-menu__container">
+            <div class="mobile-menu__items">
+                <nav class="mobile-menu__nav">
+                    <ul class="mobile-menu__menu">
+                        <li><a href="#"><img class="mobile-menu__logo" src="img/Logo.svg"></a></li>
+                        <li><a class="link mobile-menu__link" href="#">Plans</a></li>
+                        <li><a class="link mobile-menu__link" href="#">Find Domain</a></li>
+                        <li><a class="link mobile-menu__link" href="#">Why Hosterr</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu__account">
+                    <a class="link nav__link header__sign-in" href="#">Sign in</a>
+                    <button class="btn btn--primary" onclick="window.location.href='#';">Join Waitlist</button>
+                </div>
+            </div>
+            <img class="mobile-menu__close" src="img/close.svg">
+        </div>
+    </div>
+    <div class="page">
+        <header class="header">
+            <nav class="nav">
+                <div class="nav__home">
+                    <a href="#"><img class="nav__logo" src="img/Logo.svg"></a>
+                    <a class="btn btn--secondary" href="#">Hosterr is hiring!</a>
+                </div>
+                <ul class="nav__menu">
+                    <li class="nav__item"><a class="link nav__link" href="#">Plans</a></li>
+                    <li class="nav__item"><a class="link nav__link" href="#">Find Domain</a></li>
+                    <li class="nav__item"><a class="link nav__link" href="#">Why Hosterr</a></li>
+                </ul>
+            </nav>
+            <div class="header__hamburger">
+                <div class="header__hamburline"></div>
+                <div class="header__hamburline"></div>
+                <div class="header__hamburline"></div>
+            </div>
+            <div class="header__account">
+                <a class="link nav__link header__sign-in" href="#">Sign in</a>
+                <button class="btn btn--primary header__join" onclick="window.location.href='#';">Join Waitlist</button>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__photos">
+                <img class="main__photo" src="img/Hero%20Image%20(Model).png">
+                <img class="main__photo main__photo--bg main__photo--color-blue" src="img/Blue%20Shape.svg">
+                <img class="main__photo main__photo--bg main__photo--color-pink" src="img/Pink%20Shape.svg">
+                <img class="main__photo main__photo--bg main__photo--color-purple" src="img/Purple%20Shape.svg">
+            </div>
+            <div class="main__text">
+                <h1 class="main__heading">Host your website in less than 5 minutes.</h1>
+                <p class="main__description">With Hosterr, get your website up and running
+                    in no less than 5 minutes with the most competitive pricing packages available online. </p>
+                <form class="form">
+                    <div class="form__elements">
+                        <input class="form__email" type="email" placeholder="Enter e-mail address">
+                        <button class="btn btn--primary form__join">Join Waitlist</button>
+                    </div>
+
+                    <p class="form__description">No spam ever. Unsubscribe anytime.</p>
+                </form>
+            </div>
+
+        </main>
+        <footer class="footer">
+            <ul class="socials">
+                <li><a class="link socials__link" href="#">Facebook</a></li>
+                <li><a class="link socials__link" href="#">Instagram</a></li>
+                <li><a class="link socials__link" href="#">Twitter</a></li>
+            </ul>
+            <div class="support">
+                <a href="#"><img class="support__photo" src="img/Help%20Avatar.svg"></a>
+                <div class="support__text">
+                    <a class="link" href="#"><p class="support__heading">Have any questions?</p></a>
+                    <a class="link" href="#"><p class="support__subheading">Talk to a specialist</p></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+<script>
+    // set thw tow join buttons height equal
+    const btnJoinHeader = document.querySelector(".header__join")
+    const btnJoinForm = document.querySelector(".form__join")
+    btnJoinHeader.style.height = btnJoinForm.getBoundingClientRect().height + "px"
+
+    // for mobile menu
+    const hamburger = document.querySelector(".header__hamburger")
+    const mobileMenuClose = document.querySelector(".mobile-menu__close")
+    const mobileMenu = document.querySelector(".mobile-menu")
+    const wrapper = document.querySelector(".wrapper")
+    const page = document.querySelector(".page")
+
+    hamburger.addEventListener("click" , () =>{
+        mobileMenu.classList.add("mobile-menu--open")
+        page.classList.add("page--open-menu")
+        document.body.style.overflow = "hidden"
+    })
+
+    mobileMenuClose.addEventListener("click" , ()=>{
+        mobileMenu.classList.remove("mobile-menu--open")
+        page.classList.remove("page--open-menu")
+        document.body.style.overflow = "visible"
+    })
+</script>
+</body>
+</html>
