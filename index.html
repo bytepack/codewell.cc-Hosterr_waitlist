@@ -7,7 +7,7 @@
     <link href="img/favicon.png" rel="icon">
     <title>Hosterr</title>
 </head>
-<body>
+<body class=".preload-transitions">
     <div class="mobile-menu">
 
         <div class="mobile-menu__container">
@@ -114,6 +114,12 @@
         page.classList.remove("page--open-menu")
         document.body.style.overflow = "visible"
     })
+    
+    /* Prevent CSS transitions on page load */
+    document.addEventListener("DOMContentLoaded",()=>{
+    const node = document.querySelector('.preload-transitions');
+    node.classList.remove('preload-transitions');
+  })
 </script>
 </body>
 </html>

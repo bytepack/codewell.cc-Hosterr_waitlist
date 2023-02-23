@@ -60,6 +60,11 @@ body {
     background-color: var(--bg-color);
 }
 
+/* Prevent CSS transitions on page load with JS */
+.preload-transitions * {
+	transition: none !important;
+}
+
 .link {
     text-decoration: none;
     font-size: 1.6rem;
