@@ -161,6 +161,7 @@ body {
     z-index: 1;
      transform: translateX(-100%);
     transition: transform 0.5s;
+    overflow-y: auto;
 }
 
 .mobile-menu--open{
